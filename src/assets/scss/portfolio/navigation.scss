@@ -1,0 +1,42 @@
+.Navigation{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+
+    .Container{
+        position: relative;
+        max-width: 1112px;
+        margin: 0 auto;
+        padding: 0 16px;
+
+        .Content-Container{
+            min-height: 56px;
+
+            .Porfolio-Logo{
+                span{
+                    outline: none;
+                    padding: 4px;
+                    font-weight: 600;
+                    font-size: 15px;
+                }
+            }
+
+            .NavLinks{
+
+                .Link{
+                    text-decoration: none;
+                    height: 44px;
+                    padding: 0 20px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 900px){
+    .Content-Container {
+        padding: 12px 16px;
+    }
+}

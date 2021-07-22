@@ -1,0 +1,30 @@
+@import './variables';
+@import './font';
+@import './portfolio/navigation';
+
+html, body {
+    font-family: 'pfont';
+    margin: 0;
+}
+
+.Flex{
+    display: flex;
+}
+
+.JustifySpaceBetween{
+    justify-content: space-between;
+}
+
+.JustifyCenter{
+    justify-content: space-between;
+}
+
+.AlignCenter{
+    align-items: center;
+}
+
+.Section{
+    max-width: 1112px;
+    padding: 0 16px;
+    margin: 80px auto 0;
+}
