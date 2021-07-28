@@ -16,7 +16,7 @@ class PorfolioComponents extends React.Component {
 
     render() {
         return (
-            <div className="Rendered__Components">
+            <div className="Rendered__Components Flex">
                 <Router>
                     <Navigation />
 

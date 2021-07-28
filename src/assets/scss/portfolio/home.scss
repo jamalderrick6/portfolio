@@ -1,0 +1,79 @@
+.Home{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .Profile__Intro{
+        line-height: 40px;
+
+        .Intro{
+            flex-direction: column;
+
+            .Avatar{
+                height: 150px;
+                width: 150px;
+            }
+    
+            .name{
+                font-size: 24px;
+                font-weight: 600;
+            }
+    
+            .desired-profession{
+                font-size: 15px;
+                font-weight: 600;
+                font-style: italic;
+            }
+
+            .WhereILive{
+                a{
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 5px;
+                    border: none;
+                    margin-right: 10px;
+                    color: $text-white;
+
+                    svg{
+                        width: 19px;
+                    }
+                }
+            }
+        }
+
+        .FavoriteQuote{
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            opacity: 0.6;
+            padding: 0 30px;
+        }
+    }
+
+    .Profile__Summary{
+        background-color: #fafafa;
+        flex-direction: column;
+
+        .Title{
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .Skills{
+            display: grid;
+            grid-template-columns:  repeat(3, 1fr);
+            grid-gap: 30px;
+            padding: 30px 20px;
+            
+
+            .Skill{
+                height: 40px;
+                padding: 0 9px;
+                border-radius: 20px;
+                color: #fff;
+                font-size: 14px;
+                font-weight: 600;
+                background-color: #f00;
+            }
+        }
+    }
+}

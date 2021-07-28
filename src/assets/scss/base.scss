@@ -1,10 +1,29 @@
 @import './variables';
 @import './font';
+@import './button';
 @import './portfolio/navigation';
+@import './portfolio/home';
 
-html, body {
+html, body{
+    height: 100%;
+}
+
+body {
     font-family: 'pfont';
     margin: 0;
+    background-color: $background;
+    // background-image: url('../background_image/background.jpeg');
+    // background-size: cover;
+}
+
+#root, main{
+    height: inherit;
+}
+
+.Rendered__Components{
+    height: inherit;
+    flex-grow: 1;
+    flex-direction: column;
 }
 
 .Flex{
@@ -15,8 +34,12 @@ html, body {
     justify-content: space-between;
 }
 
+.JustifySpaceAround{
+    justify-content: space-around;
+}
+
 .JustifyCenter{
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .AlignCenter{
@@ -27,4 +50,14 @@ html, body {
     max-width: 1112px;
     padding: 0 16px;
     margin: 80px auto 0;
+    height: 100%;
+}
+
+.HoverArrow {
+    position: relative;
+    top: 1px;
+    margin-left: 8px;
+    stroke-width: 2px;
+    fill: none;
+    stroke: currentColor;
 }

@@ -3,6 +3,8 @@
     top: 0;
     bottom: 0;
     width: 100%;
+    height: 80px;
+    background-color: #0a2540;
 
     .Container{
         position: relative;
@@ -19,15 +21,16 @@
                     padding: 4px;
                     font-weight: 600;
                     font-size: 15px;
+                    color: $text-white;
                 }
             }
 
             .NavLinks{
-
                 .Link{
                     text-decoration: none;
                     height: 44px;
                     padding: 0 20px;
+                    color:$text-light;
                 }
             }
         }
