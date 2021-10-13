@@ -1,18 +1,22 @@
-.Direct__Button{
-    background-color:$button;
-    color: $text-white;
-    font-weight: 600;
-    font-size: 14px;
-    border-radius: 5px;
-    height: 45px;
-    width: 220px;
-    border: none;
+button {
+  cursor: pointer;
+}
 
-    &:hover .HoverArrow__tipPath {
-        transform: translateX(3px);
-      }
-      
-    &:hover .HoverArrow__linePath {
-        opacity: 1;
-      }
+.Direct__Button {
+  background-color: $button;
+  color: $text-white;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 5px;
+  height: 45px;
+  width: 220px;
+  border: none;
+
+  &:hover .HoverArrow__tipPath {
+    transform: translateX(3px);
+  }
+
+  &:hover .HoverArrow__linePath {
+    opacity: 1;
+  }
 }
