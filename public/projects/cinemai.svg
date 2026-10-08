@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <radialGradient id="glow" cx="72%" cy="58%" r="60%">
+      <stop offset="0" stop-color="#F472B6" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#F472B6" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="panel"><rect x="60" y="124" width="1480" height="816" rx="22"/></clipPath>
+  </defs>
+  <rect width="1600" height="1000" fill="#0A0F1C"/>
+  <rect width="1600" height="1000" fill="url(#glow)"/>
+  <rect x="60" y="60" width="1480" height="880" rx="22" fill="#0C1220" stroke="#1E2A44" stroke-width="2"/>
+  <rect x="60" y="60" width="1480" height="64" rx="22" fill="#0F1728"/>
+  <rect x="60" y="100" width="1480" height="24" fill="#0F1728"/>
+  <circle cx="104" cy="92" r="8" fill="#26314A"/><circle cx="132" cy="92" r="8" fill="#26314A"/><circle cx="160" cy="92" r="8" fill="#26314A"/>
+  <rect x="560" y="80" width="480" height="24" rx="12" fill="#151E33"/>
+  <rect x="120" y="290" width="160" height="14" rx="7" fill="#F472B6"/>
+  <text x="120" y="400" font-family="Helvetica, Arial, sans-serif" font-size="76" font-weight="700" fill="#E8ECF4" letter-spacing="-2">cinemai</text>
+  <rect x="120" y="450" width="380" height="14" rx="7" fill="#3A4766"/>
+  <rect x="120" y="480" width="300" height="14" rx="7" fill="#26314A"/>
+  <rect x="120" y="560" width="170" height="52" rx="26" fill="#F472B6"/>
+  <g clip-path="url(#panel)"><rect x="640" y="290" width="256" height="166" rx="12" fill="#111A2C" fill-opacity="1" stroke="#1E2A44"/>
+          <polygon points="752,352 752,394 788,373" fill="#3A4766"/><rect x="920" y="290" width="256" height="166" rx="12" fill="#111A2C" fill-opacity="1" stroke="#1E2A44"/>
+          <polygon points="1032,352 1032,394 1068,373" fill="#3A4766"/><rect x="1200" y="290" width="256" height="166" rx="12" fill="#111A2C" fill-opacity="1" stroke="#1E2A44"/>
+          <polygon points="1312,352 1312,394 1348,373" fill="#3A4766"/><rect x="640" y="480" width="256" height="166" rx="12" fill="#111A2C" fill-opacity="1" stroke="#1E2A44"/>
+          <polygon points="752,542 752,584 788,563" fill="#3A4766"/><rect x="920" y="480" width="256" height="166" rx="12" fill="#F472B6" fill-opacity="0.85" stroke="#1E2A44"/>
+          <polygon points="1032,542 1032,584 1068,563" fill="#070A13"/><rect x="1200" y="480" width="256" height="166" rx="12" fill="#111A2C" fill-opacity="1" stroke="#1E2A44"/>
+          <polygon points="1312,542 1312,584 1348,563" fill="#3A4766"/><rect x="640" y="670" width="256" height="166" rx="12" fill="#111A2C" fill-opacity="1" stroke="#1E2A44"/>
+          <polygon points="752,732 752,774 788,753" fill="#3A4766"/><rect x="920" y="670" width="256" height="166" rx="12" fill="#111A2C" fill-opacity="1" stroke="#1E2A44"/>
+          <polygon points="1032,732 1032,774 1068,753" fill="#3A4766"/><rect x="1200" y="670" width="256" height="166" rx="12" fill="#111A2C" fill-opacity="1" stroke="#1E2A44"/>
+          <polygon points="1312,732 1312,774 1348,753" fill="#3A4766"/></g>
+</svg>
