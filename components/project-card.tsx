@@ -4,7 +4,7 @@ import { ArrowUpRight } from "@/components/icons";
 import { StatusBadge } from "@/components/status-badge";
 import { formatProjectDate, type Project } from "@/data/projects";
 
-export function ProjectCard({ project, priority = false }: { project: Project; priority?: boolean }) {
+export function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface transition-colors duration-300 hover:border-line-strong">
       <div className="relative aspect-[16/10] overflow-hidden border-b border-line bg-surface-2">
@@ -13,7 +13,6 @@ export function ProjectCard({ project, priority = false }: { project: Project; p
           alt=""
           fill
           sizes="(min-width: 1024px) 360px, (min-width: 768px) 50vw, 100vw"
-          priority={priority}
           className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
         />
         <StatusBadge status={project.status} className="absolute top-3 left-3 backdrop-blur" />

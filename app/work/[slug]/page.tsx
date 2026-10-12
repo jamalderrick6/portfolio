@@ -102,7 +102,8 @@ export default async function ProjectPage({ params }: PageProps<"/work/[slug]">)
                 src={s.src}
                 alt={s.alt}
                 fill
-                priority={i === 0}
+                loading={i === 0 ? "eager" : "lazy"}
+                fetchPriority={i === 0 ? "high" : "auto"}
                 sizes="(min-width: 1152px) 1088px, 100vw"
                 className="object-cover"
               />
