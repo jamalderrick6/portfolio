@@ -32,11 +32,12 @@ export function Services() {
           happiest owning a feature from the schema to the pixels.
         </SectionHeader>
 
-        <ul className="grid gap-4 sm:grid-cols-2">
+        <ul className="spotlight-group grid gap-4 sm:grid-cols-2">
           {services.map((s, i) => (
             <li
               key={s.title}
-              className="group relative flex flex-col rounded-2xl border border-line bg-surface p-7 transition-colors duration-300 hover:border-line-strong hover:bg-surface-2 md:p-8"
+              data-spotlight
+              className="spotlight-card group relative flex flex-col rounded-2xl border border-line bg-surface p-7 transition-colors duration-300 hover:border-line-strong hover:bg-surface-2 md:p-8"
             >
               <span className="font-mono text-xs text-muted transition-colors group-hover:text-accent">
                 {String(i + 1).padStart(2, "0")}

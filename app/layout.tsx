@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Geist, Geist_Mono } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { Nav } from "@/components/nav";
+import { PointerEffects } from "@/components/pointer-effects";
 import { site } from "@/data/site";
 import "./globals.css";
 
@@ -76,6 +77,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
         <Footer />
+        <PointerEffects />
       </body>
     </html>
   );

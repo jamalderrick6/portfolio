@@ -13,7 +13,7 @@ export function Shipped() {
           screenshots, how it works and the stack behind it.
         </SectionHeader>
 
-        <ul className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <ul className="spotlight-group grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((p) => (
             <li key={p.slug}>
               <ProjectCard project={p} />
@@ -24,7 +24,8 @@ export function Shipped() {
               href={site.links.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex h-full min-h-64 flex-col justify-between rounded-2xl border border-dashed border-line-strong p-6 transition-colors duration-300 hover:border-accent/60 hover:bg-surface"
+              data-spotlight
+              className="spotlight-card group relative flex h-full min-h-64 flex-col justify-between rounded-2xl border border-dashed border-line-strong p-6 transition-colors duration-300 hover:border-accent/60 hover:bg-surface"
             >
               <span className="font-display text-5xl font-semibold text-muted transition-colors group-hover:text-accent">
                 +

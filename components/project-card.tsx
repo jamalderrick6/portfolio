@@ -6,7 +6,7 @@ import { formatProjectDate, type Project } from "@/data/projects";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface transition-colors duration-300 hover:border-line-strong">
+    <article data-spotlight className="spotlight-card group relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface transition-colors duration-300 hover:border-line-strong">
       <div className="relative aspect-[16/10] overflow-hidden border-b border-line bg-surface-2">
         <Image
           src={project.image}

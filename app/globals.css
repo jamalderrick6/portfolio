@@ -108,3 +108,74 @@
   background-size: 64px 64px;
   mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, black, transparent);
 }
+
+/*
+ * Pointer effects. `--mx` / `--my` are set by components/pointer-effects.tsx,
+ * which also marks <html data-pointer-fx> on mouse/trackpad devices without
+ * reduced motion. Without that attribute everything here stays invisible.
+ */
+@layer components {
+  /* Cards whose border lights up near the pointer. Needs `relative` on the card. */
+  .spotlight-card {
+    isolation: isolate;
+  }
+  .spotlight-card::before,
+  .spotlight-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+  /* 1px ring: a padded gradient with the content box masked out. */
+  .spotlight-card::before {
+    padding: 1px;
+    background: radial-gradient(
+      340px circle at var(--mx, -999px) var(--my, -999px),
+      rgb(255 168 110),
+      rgb(255 138 61 / 0.5) 30%,
+      transparent 75%
+    );
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+      linear-gradient(#000 0 0) content-box exclude,
+      linear-gradient(#000 0 0);
+  }
+  /* Faint fill, painted above the card background but behind its content. */
+  .spotlight-card::after {
+    z-index: -1;
+    background: radial-gradient(
+      420px circle at var(--mx, -999px) var(--my, -999px),
+      rgb(255 138 61 / 0.1),
+      transparent 70%
+    );
+  }
+  /* Light every card in the group while the pointer is over it, so neighbours catch the glow too. */
+  html[data-pointer-fx] .spotlight-group:hover .spotlight-card::before,
+  html[data-pointer-fx] .spotlight-group:hover .spotlight-card::after {
+    opacity: 1;
+  }
+
+  /* Hero: an accent copy of the grid, revealed in a circle around the pointer. */
+  .hero-grid-reveal {
+    background-image:
+      linear-gradient(to right, rgb(255 138 61 / 0.9) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 138 61 / 0.9) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(
+      circle 240px at var(--mx, -999px) var(--my, -999px),
+      black,
+      transparent
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  html[data-pointer-fx] .hero-spotlight:hover .hero-grid-reveal {
+    opacity: 0.55;
+  }
+}

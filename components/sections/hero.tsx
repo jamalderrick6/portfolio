@@ -10,12 +10,13 @@ const facts = [
 
 export function Hero() {
   return (
-    <section aria-labelledby="hero-title" className="relative overflow-hidden">
+    <section aria-labelledby="hero-title" data-spotlight className="hero-spotlight relative overflow-hidden">
       {/* Soft accent glow + grid texture, purely decorative */}
       <div
         aria-hidden
         className="hero-grid pointer-events-none absolute inset-0 opacity-25"
       />
+      <div aria-hidden className="hero-grid-reveal pointer-events-none absolute inset-0" />
       <div
         aria-hidden
         className="pointer-events-none absolute -top-56 right-[-20%] size-[48rem] bg-[radial-gradient(closest-side,rgb(255_138_61/0.16),transparent)]"
