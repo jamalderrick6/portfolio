@@ -16,7 +16,7 @@ npm run dev
 | --- | --- |
 | Name, tagline, GitHub/LinkedIn URLs, CV path | `data/site.ts` |
 | Projects (home grid + `/work/[slug]` pages) | `data/projects.ts` |
-| Project images | `public/projects/` (placeholders come from `scripts/make-placeholders.mjs`) |
+| Project screenshots | `public/projects/` (16:10, e.g. 2880×1800) |
 | CV | `public/derrick-omanwa-cv.pdf` (currently a placeholder) |
 | Section copy | `components/sections/*.tsx` |
 

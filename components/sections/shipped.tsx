@@ -9,8 +9,8 @@ export function Shipped() {
     <section id="work" aria-labelledby="work-title" className="border-t border-line py-24 md:py-32">
       <div className="container-page">
         <SectionHeader index="02" eyebrow="Shipped" title="Things I've built and put out there." id="work-title">
-          Side projects and product work. Each one has a page with the stack, a
-          few screenshots and what I&apos;d do differently.
+          Products I&apos;ve built and launched. Each one has a page with
+          screenshots, how it works and the stack behind it.
         </SectionHeader>
 
         <ul className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">

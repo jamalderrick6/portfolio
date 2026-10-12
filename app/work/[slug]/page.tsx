@@ -123,19 +123,21 @@ export default async function ProjectPage({ params }: PageProps<"/work/[slug]">)
               ))}
             </div>
           </section>
-          <section aria-labelledby="learned">
-            <h2 id="learned" className="eyebrow mb-5">
-              What I learned
-            </h2>
-            <ul className="space-y-4">
-              {project.learned.map((l) => (
-                <li key={l} className="flex gap-4 text-lg leading-relaxed text-fg/90 text-pretty">
-                  <span aria-hidden className="mt-3 h-px w-5 shrink-0 bg-accent" />
-                  {l}
-                </li>
-              ))}
-            </ul>
-          </section>
+          {project.learned?.length ? (
+            <section aria-labelledby="learned">
+              <h2 id="learned" className="eyebrow mb-5">
+                What I learned
+              </h2>
+              <ul className="space-y-4">
+                {project.learned.map((l) => (
+                  <li key={l} className="flex gap-4 text-lg leading-relaxed text-fg/90 text-pretty">
+                    <span aria-hidden className="mt-3 h-px w-5 shrink-0 bg-accent" />
+                    {l}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ) : null}
         </div>
 
         <aside className="space-y-10 lg:border-l lg:border-line lg:pl-10">

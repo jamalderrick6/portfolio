@@ -1,6 +1,5 @@
 // Drives the "Shipped" grid on the home page and every /work/[slug] page.
-// Order here is display order. Entries marked PLACEHOLDER need real copy,
-// links and screenshots.
+// Order here is display order.
 
 export type ProjectStatus = "live" | "wip";
 
@@ -14,112 +13,101 @@ export type Project = {
   repo?: string;
   /** Card / hero image, path under /public. */
   image: string;
-  /** ISO date (YYYY-MM or YYYY-MM-DD) of launch or last major release. */
+  /** ISO date (YYYY-MM or YYYY-MM-DD) the project started. */
   date: string;
   // Detail-page content
   description: string[];
   screenshots: { src: string; alt: string }[];
   stack: string[];
-  learned: string[];
+  /** Optional; the section is hidden when empty. */
+  learned?: string[];
 };
 
 export const projects: Project[] = [
   {
-    // PLACEHOLDER copy
-    slug: "dead-star",
-    name: "DEAD STAR",
-    oneLiner: "A small browser game about keeping a dying star alive for one more minute.",
-    tags: ["Game", "Canvas", "TypeScript"],
+    slug: "propelladocs",
+    name: "PropellaDocs",
+    oneLiner:
+      "An AI proposal and SOW writer for IT consultants: paste a client email or brief and get a structured, client-ready document.",
+    tags: ["SaaS", "AI", "Next.js", "Django"],
     status: "live",
-    url: "https://example.com/dead-star",
-    image: "/projects/dead-star.svg",
-    date: "2026-08",
+    url: "https://propelladocs.ai",
+    image: "/projects/propelladocs-editor.jpg",
+    date: "2026-04",
     description: [
-      "DEAD STAR is a weekend project that got out of hand: a one-screen arcade game where you route energy into a collapsing star while debris closes in.",
-      "Everything renders on a single canvas with a fixed-timestep loop, so it plays the same on a cheap Android phone as on a desktop.",
+      "PropellaDocs writes client proposals and statements of work for IT and software consultants. Paste a client email or fill in a brief, and it drafts a structured, professional document. Beyond proposals and SOWs it covers solution designs, kickoff charters, post-mortems, QBRs, business cases and UAT plans.",
+      "Documents are generated section by section from the brief, so each section can be reviewed, edited inline with autosave, or regenerated on its own. Finished documents export to PDF and DOCX, or go to the client as a shareable link that needs no account. Free, Starter and Pro plans are billed through Stripe.",
+      "The editor is a Next.js app built on Plate. Behind it is a Django REST API with Celery workers and Redis for background jobs, PostgreSQL for storage, and Docker deploys on Render.",
     ],
     screenshots: [
-      { src: "/projects/dead-star.svg", alt: "DEAD STAR gameplay screen" },
-    ],
-    stack: ["TypeScript", "Canvas 2D", "Vite", "Vercel"],
-    learned: [
-      "A fixed-timestep game loop removes a whole class of frame-rate bugs.",
-      "Scope cuts are a design tool: the game got better every time a feature was removed.",
-    ],
-  },
-  {
-    // PLACEHOLDER copy
-    slug: "botsignal",
-    name: "BotSignal",
-    oneLiner: "Scores incoming traffic for bot likelihood from a handful of cheap request signals.",
-    tags: ["Data", "API", "Node.js"],
-    status: "live",
-    url: "https://example.com/botsignal",
-    image: "/projects/botsignal.svg",
-    date: "2026-05",
-    description: [
-      "BotSignal is a lightweight scoring API. You send it request metadata and it returns a 0–100 bot likelihood with the signals that drove the score.",
-      "It came out of years of working on the other side of the fence (building scrapers) and knowing exactly which shortcuts automated clients take.",
-    ],
-    screenshots: [
-      { src: "/projects/botsignal.svg", alt: "BotSignal dashboard showing traffic scores" },
-    ],
-    stack: ["Node.js", "TypeScript", "PostgreSQL", "Redis", "Next.js"],
-    learned: [
-      "Explainable scores beat accurate black boxes: users trust a score they can argue with.",
-      "Cheap signals combined well outperform one expensive signal.",
-    ],
-  },
-  {
-    // PLACEHOLDER copy
-    slug: "contentbunker",
-    name: "ContentBunker",
-    oneLiner: "Saves the articles, threads and videos you care about before they disappear.",
-    tags: ["Scraping", "Full-stack", "Storage"],
-    status: "live",
-    url: "https://example.com/contentbunker",
-    image: "/projects/contentbunker.svg",
-    date: "2026-02",
-    description: [
-      "ContentBunker archives a full, readable copy of a page the moment you save it, so links that rot or get deleted stay readable.",
-      "The capture pipeline runs a headless browser, strips the page down to its content and stores a clean snapshot alongside the original HTML.",
-    ],
-    screenshots: [
-      { src: "/projects/contentbunker.svg", alt: "ContentBunker library view" },
-    ],
-    stack: ["Next.js", "Playwright", "PostgreSQL", "S3-compatible storage"],
-    learned: [
-      "Capture once, render many: storing the raw snapshot made every later feature easier.",
-      "Queue everything that touches a headless browser.",
-    ],
-  },
-  {
-    slug: "cinemai",
-    name: "cinemai",
-    oneLiner: "A portfolio and marketplace platform for AI video creators.",
-    tags: ["Marketplace", "Next.js", "Postgres"],
-    status: "wip",
-    url: "https://example.com/cinemai",
-    image: "/projects/cinemai.svg",
-    date: "2026-10",
-    description: [
-      "cinemai gives AI video creators a proper home: a portfolio that shows their work well, and a marketplace where clients can find and hire them.",
-      "Phase 1 covers creator profiles, uploads and discovery, including style-similarity search so clients can find creators whose work looks like a reference clip.",
-    ],
-    screenshots: [
-      { src: "/projects/cinemai.svg", alt: "cinemai creator portfolio page" },
+      {
+        src: "/projects/propelladocs-editor.jpg",
+        alt: "PropellaDocs editor showing a generated consulting proposal with Understanding of the Need, Proposed Approach and Scope of Work sections",
+      },
+      {
+        src: "/projects/propelladocs-brief.jpg",
+        alt: "PropellaDocs brief form collecting client, project and approach details before generating a proposal",
+      },
+      {
+        src: "/projects/propelladocs-export.jpg",
+        alt: "PropellaDocs export section showing a proposal rendered as PDF pages",
+      },
     ],
     stack: [
-      "Next.js (App Router)",
+      "Next.js",
+      "React",
       "TypeScript",
-      "PostgreSQL + Drizzle",
-      "pgvector",
-      "Auth.js",
-      "Tailwind CSS",
+      "Plate",
+      "Django REST Framework",
+      "Celery",
+      "Redis",
+      "PostgreSQL",
+      "OpenAI",
+      "Stripe",
+      "Docker",
+      "Render",
     ],
-    learned: [
-      "pgvector inside the main database is plenty for similarity search at this scale; no separate vector store needed.",
-      "JWT sessions without a DB adapter keep auth simple while the data model is still moving.",
+  },
+  {
+    slug: "contentbunker",
+    name: "ContentBunker",
+    oneLiner:
+      "Turns a real estate listing into a finished short-form video: AI script, voiceover, motion, captions and music.",
+    tags: ["SaaS", "AI video", "Next.js", "Prisma"],
+    status: "live",
+    url: "https://www.contentbunker.com",
+    image: "/projects/contentbunker-home.jpg",
+    date: "2026-03",
+    description: [
+      "ContentBunker launched as AI software for short-form video agencies: a brief per client, AI ideation and scriptwriting, one-click client approval from a phone with no account needed, and a content calendar. That version is what the public site still shows.",
+      "It has since pivoted to real estate. An agent pastes a listing and gets a finished video for TikTok, Instagram Reels and YouTube Shorts: an AI-written script, ElevenLabs voiceover, Ken Burns motion over the listing photos, burned-in captions and music, rendered with Remotion as background jobs on Trigger.dev.",
+      "Billing runs on Stripe subscriptions plus one-time render packs, rendered video lives in Cloudflare R2, and script generation uses OpenAI with an Anthropic fallback.",
+    ],
+    screenshots: [
+      {
+        src: "/projects/contentbunker-home.jpg",
+        alt: "ContentBunker home page with a client dashboard listing scripts by platform and approval status",
+      },
+      {
+        src: "/projects/contentbunker-workflow.jpg",
+        alt: "ContentBunker how-it-works section: client brief, AI ideation, script writing, client approval, schedule and track",
+      },
+    ],
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "PostgreSQL (Neon)",
+      "Prisma",
+      "Auth.js",
+      "OpenAI",
+      "Anthropic",
+      "ElevenLabs",
+      "Remotion",
+      "Trigger.dev",
+      "Cloudflare R2",
+      "Stripe",
+      "Sentry",
     ],
   },
 ];
