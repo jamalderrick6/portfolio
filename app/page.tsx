@@ -11,7 +11,6 @@ const personJsonLd = {
   name: site.name,
   jobTitle: site.role,
   url: site.url,
-  image: `${site.url}/derrick-omanwa.jpg`,
   address: { "@type": "PostalAddress", addressLocality: "Nairobi", addressCountry: "KE" },
   alumniOf: { "@type": "CollegeOrUniversity", name: "United States International University–Africa" },
   sameAs: [site.links.github, site.links.linkedin],
