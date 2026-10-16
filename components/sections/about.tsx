@@ -52,10 +52,11 @@ export function About() {
               watching it run in production.
             </p>
             <p>
-              I&apos;ve spent most of my career at lobstr. I joined in 2020 as a
-              Python data engineer building ETL pipelines, moved into React and
-              then senior React engineering, and most recently led the
-              engineering team as Lead Engineer. Along the way I led the
+              I&apos;ve spent most of my career at lobstr, a data-collection
+              platform. I joined in 2020 as a Python data engineer building
+              scrapers and the ETL pipelines behind them, then worked across the
+              platform itself as a React and senior React engineer, and most
+              recently led the engineering team as Lead Engineer. Along the way I led the
               migration to Next.js that cut initial load times by 40%, built
               Node.js APIs handling 200K+ requests a day at 99.9% uptime, and set
               up CI/CD that took deploys from 45 minutes to 10.

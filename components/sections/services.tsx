@@ -8,7 +8,7 @@ const services = [
   },
   {
     title: "Scraping & data pipelines",
-    body: "Scrapers and ETL pipelines that turn messy sources into clean, queryable data. I've built pipelines processing 5M+ records a day and reworked PostgreSQL schemas to make the queries behind them 60% faster.",
+    body: "Scrapers that hold up against real websites, plus the platform and ETL pipelines behind them that turn messy sources into clean, queryable data. I've run pipelines processing 5M+ records a day and reworked PostgreSQL schemas to make the queries behind them 60% faster.",
     tags: ["Python", "Node.js", "PostgreSQL"],
   },
   {
