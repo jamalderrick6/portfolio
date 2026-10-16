@@ -1,5 +1,4 @@
 // Single source of truth for personal details and outbound links.
-// TODO: replace the placeholder LinkedIn handle before deploying.
 
 const fallbackUrl = "http://localhost:3000";
 
@@ -21,7 +20,7 @@ export const site = {
     "Derrick Omanwa is a senior full-stack engineer in Nairobi building web products end to end: product engineering, data pipelines, React frontends and team leadership. Open to remote US roles.",
   links: {
     github: "https://github.com/jamalderrick6",
-    linkedin: "https://www.linkedin.com/in/your-handle",
+    linkedin: "https://www.linkedin.com/in/derrick-jamal-a56026116",
     cv: "/derrick-omanwa-cv.pdf",
   },
 } as const;
