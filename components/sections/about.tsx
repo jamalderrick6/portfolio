@@ -17,7 +17,7 @@ const stack = [
 const links = [
   { href: site.links.github, label: "GitHub", Icon: GitHubIcon, external: true },
   { href: site.links.linkedin, label: "LinkedIn", Icon: LinkedInIcon, external: true },
-  { href: site.links.cv, label: "Download CV (PDF)", Icon: FileIcon, external: false },
+  { href: site.links.cv, label: "Download CV (PDF)", Icon: FileIcon, external: false, download: site.links.cvFilename },
 ];
 
 export function About() {
@@ -47,11 +47,12 @@ export function About() {
             </p>
 
             <ul className="flex flex-wrap gap-3 pt-5">
-              {links.map(({ href, label, Icon, external }) => (
+              {links.map(({ href, label, Icon, external, download }) => (
                 <li key={label}>
                   <a
                     href={href}
                     {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    download={download}
                     className="inline-flex items-center gap-2 rounded-full border border-line-strong px-4 py-2.5 text-base font-medium text-fg transition-colors hover:border-fg/40 hover:bg-surface-2"
                   >
                     <Icon />

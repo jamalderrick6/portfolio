@@ -38,7 +38,8 @@ export function Footer() {
           <li>
             <a
               href={site.links.cv}
-              aria-label="CV (PDF)"
+              download={site.links.cvFilename}
+              aria-label="Download CV (PDF)"
               className="grid size-10 place-items-center rounded-lg transition-colors hover:bg-surface-2 hover:text-fg"
             >
               <FileIcon />

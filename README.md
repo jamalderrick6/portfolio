@@ -17,7 +17,7 @@ npm run dev
 | Name, tagline, GitHub/LinkedIn URLs, CV path | `data/site.ts` |
 | Projects (home grid + `/work/[slug]` pages) | `data/projects.ts` |
 | Project screenshots | `public/projects/` (16:10, e.g. 2880×1800) |
-| CV | `public/derrick-omanwa-cv.pdf` (currently a placeholder) |
+| CV | `public/derrick-omanwa-cv.pdf` (downloads as `Derrick-Omanwa-Resume.pdf`; set in `data/site.ts`) |
 | Section copy | `components/sections/*.tsx` |
 
 Adding a project to `data/projects.ts` creates its page, OG image, and sitemap entry. Nothing else needs changing.

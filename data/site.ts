@@ -22,5 +22,6 @@ export const site = {
     github: "https://github.com/jamalderrick6",
     linkedin: "https://www.linkedin.com/in/derrick-jamal-a56026116",
     cv: "/derrick-omanwa-cv.pdf",
+    cvFilename: "Derrick-Omanwa-Resume.pdf",
   },
 } as const;
