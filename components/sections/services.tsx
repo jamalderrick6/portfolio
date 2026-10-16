@@ -8,18 +8,18 @@ const services = [
   },
   {
     title: "Scraping & data pipelines",
-    body: "Crawlers that hold up against real websites, with retries, sessions and headless browsers, feeding pipelines that turn messy pages into clean, queryable data.",
+    body: "Scrapers and ETL pipelines that turn messy sources into clean, queryable data. I've built pipelines processing 5M+ records a day and reworked PostgreSQL schemas to make the queries behind them 60% faster.",
     tags: ["Python", "Node.js", "PostgreSQL"],
   },
   {
     title: "Frontend / React",
-    body: "Fast, accessible interfaces in React and Next.js. Component systems, tricky state, and the small details that make an app feel solid.",
+    body: "Fast, accessible interfaces in React and Next.js. I led a Next.js migration that cut initial load times by 40%, and I sweat the small details that make an app feel solid.",
     tags: ["React", "Next.js", "TypeScript"],
   },
   {
     title: "Team leadership",
-    body: "I ran the dev team at lobstr.io: hiring, code review, planning and helping a small team ship reliably, week after week.",
-    tags: ["Hiring", "Mentoring", "Delivery"],
+    body: "As Lead Engineer at lobstr I guided the engineering team: technical direction, coding standards and code review, mentoring frontend and backend engineers, and a weekly alignment process that made delivery predictable.",
+    tags: ["Mentoring", "Code review", "Delivery"],
   },
 ];
 

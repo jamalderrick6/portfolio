@@ -3,7 +3,7 @@ import { ArrowRight } from "@/components/icons";
 import { site } from "@/data/site";
 
 const facts = [
-  { value: "6 yrs", label: "leading an engineering team" },
+  { value: "6+ yrs", label: "building production web apps" },
   { value: "End to end", label: "from database schema to pixels" },
   { value: "UTC+3", label: "afternoons overlap US mornings" },
 ];
@@ -40,10 +40,10 @@ export function Hero() {
         </h1>
 
         <p className="mt-7 max-w-2xl text-lg leading-relaxed text-muted text-pretty sm:text-xl">
-          Senior full-stack engineer in Nairobi. I spent six years leading the
-          engineering team at lobstr.io, building scrapers, data pipelines and
-          the React apps on top of them. Now looking for the next team to build
-          with.
+          Senior full-stack engineer in Nairobi with 6+ years building web
+          products, most recently as Lead Engineer at lobstr. React and Next.js
+          up front, Node.js, Python and PostgreSQL behind it. Now looking for
+          the next team to build with.
         </p>
 
         <div className="mt-10 flex flex-col gap-3 xs:flex-row">
